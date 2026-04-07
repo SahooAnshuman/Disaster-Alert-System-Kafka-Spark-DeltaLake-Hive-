@@ -30,3 +30,21 @@ Before ingestion, a Python-based producer simulates a network of sensors streami
 - Disaster Types: Earthquake, Flood, Wildfire, Tsunami, Landslide, Cyclone,Volcano.
 - Dirty Data Injection: Includes null values, negative indices, duplicates, and corrupt JSON to test pipeline resilience.
 
+
+## Data Pipeline (Medallion Architecture)
+The pipeline refines raw sensor data into actionable business intelligence across three distinct layers :
+### Bronze Layer (Raw Ingestion)
+ Ingests raw Kafka streams into Delta Lake
+ Preserves full original schema and raw JSON for auditability.
+ ### Silver Layer (Quality & Enrichment)
+ Applies data quality checks and deduplication.
+ Feature Engineering: Creates threat_band (Low to Catastrophic), critical_flag for emergency triggers, and night_flag for time-sensitive response.
+ ### Gold Layer (Dimensional Modeling)
+ Produces optimized Star Schema tables: fact_disaster, dim_region, and dim_station
+ Structured for high-performance analytical querying
+ ## Business Intelligence & SQL Analysis
+ Dedicated SQL views are created to bridge the gap between the storage layer and visualization tools.
+ ### SQL View Collection
+ bi_fact_disaster: Enriched fact data with explicit type casting for Power BI.
+ bi_dim_region: Mapping of regional risk levels and geographic types.
+ bi_dim_station: Detailed monitoring station metadata and response times.
