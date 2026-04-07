@@ -1,0 +1,59 @@
+CREATE DATABASE IF NOT EXISTS disaster;
+
+USE disaster;
+
+-- Fact Table
+CREATE TABLE fact_disaster
+USING DELTA
+LOCATION '/opt/spark/warehouse/fact_disaster';
+
+-- Dimension: Region
+CREATE TABLE dim_region
+USING DELTA
+LOCATION '/opt/spark/warehouse/dim_region';
+
+-- Dimension: Station
+CREATE TABLE dim_station
+USING DELTA
+LOCATION '/opt/spark/warehouse/dim_station';
+
+-- Disaster Fact View
+CREATE VIEW bi_fact_disaster AS
+SELECT
+    CAST(sensor_id AS STRING)           AS sensor_id,
+    CAST(station_id AS STRING)          AS station_id,
+    CAST(region AS STRING)              AS region,
+    CAST(threat_index_int AS DOUBLE)    AS threat_index,
+    CAST(alert_level AS INT)            AS alert_level,
+    CAST(disaster_type AS STRING)       AS disaster_type,
+    CAST(threat_band AS STRING)         AS threat_band,
+    CAST(critical_flag AS INT)          AS critical_flag,
+    CAST(night_flag AS INT)             AS night_flag,
+    CAST(event_ts AS TIMESTAMP)         AS event_time,
+    CAST(date AS DATE)                  AS event_date,
+    CAST(hour AS INT)                   AS event_hour
+FROM fact_disaster;
+
+-- Region Dimension View
+CREATE OR REPLACE VIEW bi_dim_region AS
+SELECT
+    CAST(region AS STRING)        AS region,
+    CAST(region_type AS STRING)   AS region_type,
+    CAST(disaster_risk AS STRING) AS disaster_risk
+FROM dim_region;
+
+-- Station Dimension View
+CREATE OR REPLACE VIEW bi_dim_station AS
+SELECT
+    CAST(station_id AS STRING)          AS station_id,
+    CAST(station_type AS STRING)        AS station_type,
+    CAST(response_time_mins AS INT)     AS response_time_mins
+FROM dim_station;
+
+SELECT COUNT(*) FROM fact_disaster;
+
+SELECT * FROM dim_region;
+
+SELECT * FROM dim_station;
+
+exit;
