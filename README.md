@@ -1,4 +1,5 @@
 # Disaster Monitoring Analysis [Kafka + Apache Spark + DeltaLake + Hive Metastore + Power BI]
+<img width="955" height="650" alt="image" src="https://github.com/user-attachments/assets/4b0f10f2-6b6e-4b7e-8ed9-c059f70bb787" />
 
 ## Overview
 The Disaster Alert & Monitoring System is a real-time data engineering project developed to stream, process, and analyze disaster threat signals from sensor networks deployed across disaster-prone regions. It integrates data related to sensor readings, monitoring stations, geographic regions, and alert levels to understand disaster patterns and enable rapid response.
