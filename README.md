@@ -13,7 +13,7 @@ The project utilizes the Medallion Architecture to process data through Bronze, 
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
 </p>
-<img width="955" height="650" alt="image" src="https://github.com/user-attachments/assets/4b0f10f2-6b6e-4b7e-8ed9-c059f70bb787" />
+<img width="956" height="649" alt="image" src="https://github.com/user-attachments/assets/4dcaae63-336c-4f1d-9d2b-cb4b7543322a" />
 
 Apache Kafka : Real-time event streaming backbone
 Apache Spark : Structured Streaming for multi-layer data processing
