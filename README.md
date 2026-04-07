@@ -29,9 +29,9 @@ Before ingestion, a Python-based producer simulates a network of sensors streami
 
 
 ### Simulation Highlights
-Geographic Regions: Coastal, Hillside, Forest, Urban, Riverbank, Desert
-Disaster Types: Earthquake, Flood, Wildfire, Tsunami, Landslide, Cyclone, Volcano
-Dirty Data Injection: Includes null values, negative indices, duplicates, and corrupt JSON to test pipeline resilience.
+-Geographic Regions: Coastal, Hillside, Forest, Urban, Riverbank, Desert
+-Disaster Types: Earthquake, Flood, Wildfire, Tsunami, Landslide, Cyclone,Volcano.
+-Dirty Data Injection: Includes null values, negative indices, duplicates, and corrupt JSON to test pipeline resilience.
 
 
 
