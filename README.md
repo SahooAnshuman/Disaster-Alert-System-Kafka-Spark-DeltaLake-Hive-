@@ -61,4 +61,17 @@ The system supports real-time monitoring via the Apache Spark Thrift Server usin
 - Drill-Down Analytics : Custom tooltips linked to treemaps for region-specific disaster severity.
 
 ## Project Summary
-This project demonstrates an end-to-end real-time data engineering lifecycle. By combining Kafka for ingestion, Spark & Delta Lake for robust processing, and Power BI for visualization, the system transforms chaotic sensor streams into a reliable disaster monitoring platform.<p align="center">Thank you for reviewing this project. I hope these disaster monitoring insights are valuable.</p><p align="center">🌟⭐⭐⭐🌟</p>
+This project demonstrates an end-to-end real-time data engineering lifecycle. By combining Kafka for ingestion, Spark & Delta Lake for robust processing, and Power BI for visualization, the system transforms chaotic sensor streams into a reliable disaster monitoring platform.
+
+<p align="center">
+Thank you for reviewing this project. I hope these disaster monitoring insights are valuable, informative and useful.</p>
+
+<p align="center">
+  🌟⭐⭐⭐🌟
+</p>
+<h3 align="center">Expression of Gratitude</h3>
+
+<p align="center">
+  Thank you for reviewing this project. I hope the disaster monitoring insights and the architectural approach presented are informative and useful for your objectives.
+</p>
+
