@@ -34,8 +34,10 @@ Before ingestion, a Python-based producer simulates a network of sensors streami
 ## Data Pipeline (Medallion Architecture)
 The pipeline refines raw sensor data into actionable business intelligence across three distinct layers :
 ### Bronze Layer (Raw Ingestion)
- Ingests raw Kafka streams into Delta Lake
- Preserves full original schema and raw JSON for auditability.
+
+- Ingests raw Kafka streams into Delta Lake 
+-  Preserves full original schema and raw JSON for auditability.
+
  ### Silver Layer (Quality & Enrichment)
  Applies data quality checks and deduplication.
  Feature Engineering: Creates threat_band (Low to Catastrophic), critical_flag for emergency triggers, and night_flag for time-sensitive response.
